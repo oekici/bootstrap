@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Scaffolding · Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="docs/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="docs/assets/css/docs.css" rel="stylesheet">
+    <link href="docs/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+  
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="docs/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="docs/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="docs/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="docs/assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-146052-10']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    
+
+
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#global"><i class="icon-chevron-right"></i> Global styles</a></li>
+          <li><a href="#gridSystem"><i class="icon-chevron-right"></i> Grid system</a></li>
+          <li><a href="#fluidGridSystem"><i class="icon-chevron-right"></i> Fluid grid system</a></li>
+          <li><a href="#layouts"><i class="icon-chevron-right"></i> Layouts</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+
+        <!-- Global Bootstrap settings
+        ================================================== -->
+        <section id="global">
+         <h3>gerekli</h3>
+          <p>proje başında.</p>
+		<pre class="prettyprint linenums">
+		&lt;!DOCTYPE html&gt;
+		&lt;html lang="en"&gt;
+		  ...
+		&lt;/html&gt;
+		</pre>
+
+        </section>
+
+
+
+
+        <!-- Grid system
+        ================================================== -->
+        <section id="gridSystem">
+          <div class="page-header">
+            <h1> grid sistemi</h1>
+          </div>
+
+          <h2>ızgara örneği</h2>
+         
+          <div class="bs-docs-grid">
+            <div class="row show-grid">
+              <div class="span1">tugdev</div>
+              <div class="span1">tugdev</div>
+              <div class="span1">deneme</div>
+              <div class="span1">tugdev</div>
+              <div class="span1">1</div>
+              <div class="span1">hello</div>
+              <div class="span1">heri</div>
+              <div class="span1">slm</div>
+              <div class="span1">deneme</div>
+            </div>
+            <div class="row show-grid">
+              <div class="span2">2</div>
+              <div class="span3">3</div>
+              <div class="span4">4</div>
+            </div>
+            <div class="row show-grid">
+              <div class="span4">4</div>
+              <div class="span5">5</div>
+            </div>
+            <div class="row show-grid">
+              <div class="span9">9</div>
+            </div>
+          </div>
+
+          <h3>temel grid HTML</h3>
+          
+		<pre class="prettyprint linenums">
+		&lt;div class="row"&gt;
+		  &lt;div class="span4"&gt;...&lt;/div&gt;
+		  &lt;div class="span8"&gt;...&lt;/div&gt;
+		&lt;/div&gt;
+		</pre>
+       
+
+          <h2>sütunlar</h2>
+          <div class="bs-docs-grid">
+            <div class="row show-grid">
+              <div class="span4">4</div>
+              <div class="span3 offset2">3 offset 2</div>
+            </div><!-- /row -->
+            <div class="row show-grid">
+              <div class="span3 offset1">3 offset 1</div>
+              <div class="span3 offset2">3 offset 2</div>
+            </div><!-- /row -->
+            <div class="row show-grid">
+              <div class="span6 offset3">6 offset 3</div>
+            </div><!-- /row -->
+          </div>
+<p> yani </p>
+			<pre class="prettyprint linenums">
+			&lt;div class="row"&gt;
+			  &lt;div class="span4"&gt;...&lt;/div&gt;
+			  &lt;div class="span3 offset2"&gt;...&lt;/div&gt;
+			&lt;/div&gt;
+			</pre>
+
+          <h2>sütunlar</h2>
+          <div class="row show-grid">
+            <div class="span9">
+              Level 1 column
+              <div class="row show-grid">
+                <div class="span6">
+                  Level 2
+                </div>
+                <div class="span3">
+                  Level 2
+                </div>
+              </div>
+            </div>
+          </div>
+<p> yani vs. örnekler</p>
+			<pre class="prettyprint linenums">
+			&lt;div class="row"&gt;
+			  &lt;div class="span9"&gt;
+			    Level 1 column
+			    &lt;div class="row"&gt;
+			      &lt;div class="span6"&gt;Level 2&lt;/div&gt;
+			      &lt;div class="span3"&gt;Level 2&lt;/div&gt;
+			    &lt;/div&gt;
+			  &lt;/div&gt;
+			&lt;/div&gt;
+			</pre>
+        </section>
+
+        <!-- Layouts (Default and fluid)
+        ================================================== -->
+        <section id="layouts">
+          <div class="page-header">
+            <h1> düzenler</h1>
+          </div>
+
+          <h2>sabit düzen</h2>
+           <div class="mini-layout">
+            <div class="mini-layout-body"></div>
+          </div>
+<p> kod </p>
+			<pre class="prettyprint linenums">
+			&lt;body&gt;
+			  &lt;div class="container"&gt;
+			    ...
+			  &lt;/div&gt;
+			&lt;/body&gt;
+			</pre>
+
+          <h2>düzen2</h2>
+          <div class="mini-layout fluid">
+            <div class="mini-layout-sidebar"></div>
+            <div class="mini-layout-body"></div>
+          </div>
+<p>kod </p>
+				<pre class="prettyprint linenums">
+				&lt;div class="container-fluid"&gt;
+				  &lt;div class="row-fluid"&gt;
+				    &lt;div class="span2"&gt;
+				      &lt;!--Sidebar content--&gt;
+				    &lt;/div&gt;
+				    &lt;div class="span10"&gt;
+				      &lt;!--Body content--&gt;
+				    &lt;/div&gt;
+				  &lt;/div&gt;
+				&lt;/div&gt;
+				</pre>
+        </section>
+
+
+
+
+ <!-- Le javascript -->
+    
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="docs/assets/js/jquery.js"></script>
+    <script src="docs/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="docs/assets/js/bootstrap-transition.js"></script>
+    <script src="docs/assets/js/bootstrap-alert.js"></script>
+    <script src="docs/assets/js/bootstrap-modal.js"></script>
+    <script src="docs/assets/js/bootstrap-dropdown.js"></script>
+    <script src="docs/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="docs/assets/js/bootstrap-tab.js"></script>
+    <script src="docs/assets/js/bootstrap-tooltip.js"></script>
+    <script src="docs/assets/js/bootstrap-popover.js"></script>
+    <script src="docs/assets/js/bootstrap-button.js"></script>
+    <script src="docs/assets/js/bootstrap-collapse.js"></script>
+    <script src="docs/assets/js/bootstrap-carousel.js"></script>
+    <script src="docs/assets/js/bootstrap-typeahead.js"></script>
+    <script src="docs/assets/js/bootstrap-affix.js"></script>
+    <script src="docs/assets/js/application.js"></script>
+
+
+  
+  </body>
+</html>
+
